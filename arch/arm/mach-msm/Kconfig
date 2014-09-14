@@ -445,18 +445,6 @@ config MACH_TC2
 	help
 	  Support for the HTC TC2
 
-config MACH_ZARA
-	depends on ARCH_MSM8930
-	bool "ZARA"
-	help
-	  Support for the HTC ZARA
-
-config MACH_ZARA_CL
-	depends on ARCH_MSM8930
-	bool "ZARA_CL"
-	help
-	  Support for the HTC ZARA_CL
-
 config MACH_K2_UL
 	depends on ARCH_MSM8930
 	bool "K2_UL"
@@ -1840,6 +1828,13 @@ config MSM_RPCSERVER_WATCHDOG
 	bool "Watchdog RPC server"
 	help
 	  The dog_keepalive server handles watchdog events.
+
+config FORCE_FAST_CHARGE
+	bool "Force AC charge mode at will"
+	default y
+	help
+	  A simple sysfs interface to force adapters that
+	  are detected as USB to charge as AC.
 
 config MSM_RPC_WATCHDOG
 	depends on MSM_ONCRPCROUTER
