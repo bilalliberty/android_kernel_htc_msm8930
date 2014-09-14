@@ -191,7 +191,7 @@ static int gpio_event_probe(struct platform_device *pdev)
 		}
 #endif
 #ifdef CONFIG_TOUCHSCREEN_SYNAPTICS_SWEEP2WAKE
-		if ((!strcmp(input_dev->name, "device-keypad")){
+		if (!strcmp(input_dev->name, "device-keypad")){
 			sweep2wake_setdev(input_dev);
 			printk(KERN_INFO "[sweep2wake]: set device %s\n", input_dev->name);
 		}
